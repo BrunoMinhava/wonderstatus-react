@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 70" width="180" height="70">
+  <rect width="180" height="70" fill="#ffffff" rx="5" stroke="#e0e0e0" stroke-width="1"/>
+  <!-- Red bars (Canada flag inspired) -->
+  <rect x="0" y="0" width="14" height="70" fill="#D52B1E" rx="5"/>
+  <rect x="5" y="0" width="9" height="70" fill="#D52B1E"/>
+  <rect x="166" y="0" width="14" height="70" fill="#D52B1E" rx="5"/>
+  <rect x="166" y="0" width="9" height="70" fill="#D52B1E"/>
+  <!-- Maple leaf simplified -->
+  <text x="90" y="32" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#1A1A1A" text-anchor="middle" letter-spacing="1">NRC</text>
+  <text x="90" y="48" font-family="Arial, sans-serif" font-size="8.5" fill="#D52B1E" text-anchor="middle" font-weight="600" letter-spacing="0.5">National Research Council</text>
+  <text x="90" y="61" font-family="Arial, sans-serif" font-size="8" fill="#555555" text-anchor="middle">Canada</text>
+</svg>

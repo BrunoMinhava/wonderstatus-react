@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 70" width="180" height="70">
+  <rect width="180" height="70" fill="#ffffff" rx="5" stroke="#e0e0e0" stroke-width="1"/>
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="6" height="70" fill="#1B3A6B" rx="5"/>
+  <rect x="0" y="0" width="3" height="70" fill="#1B3A6B"/>
+  <!-- BAS large text -->
+  <text x="96" y="36" font-family="Arial, sans-serif" font-size="26" font-weight="800" fill="#1B3A6B" text-anchor="middle" letter-spacing="3">BAS</text>
+  <!-- Full name -->
+  <text x="96" y="51" font-family="Arial, sans-serif" font-size="7.5" fill="#444444" text-anchor="middle" letter-spacing="0.3">Bureau of Analysed Samples</text>
+  <!-- UK since tag -->
+  <text x="96" y="63" font-family="Arial, sans-serif" font-size="7" fill="#888888" text-anchor="middle">United Kingdom · Since 1935</text>
+</svg>

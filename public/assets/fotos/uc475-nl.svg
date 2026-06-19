@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#f5f9fd"/>
+  <rect x="48" y="48" width="704" height="704" rx="30" fill="#ffffff" stroke="#d8e4ef" stroke-width="4"/>
+  <rect x="338" y="130" width="124" height="92" rx="22" fill="#dff0fb" stroke="#0f6db6" stroke-width="6"/>
+  <rect x="308" y="196" width="184" height="368" rx="34" fill="#eef7fd" stroke="#0f6db6" stroke-width="8"/>
+  <line x1="350" y1="262" x2="450" y2="262" stroke="#8ab6db" stroke-width="6"/>
+  <line x1="350" y1="314" x2="450" y2="314" stroke="#8ab6db" stroke-width="6"/>
+  <line x1="350" y1="366" x2="450" y2="366" stroke="#8ab6db" stroke-width="6"/>
+  <text x="84" y="642" fill="#10273f" font-family="Arial, sans-serif" font-size="40" font-weight="700">UC475-NL</text>
+  <text x="84" y="684" fill="#5a7088" font-family="Arial, sans-serif" font-size="24">Placeholder local para producao</text>
+</svg>

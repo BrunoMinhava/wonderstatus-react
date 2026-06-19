@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#f5f9fd"/>
+  <rect x="48" y="48" width="704" height="704" rx="30" fill="#ffffff" stroke="#d8e4ef" stroke-width="4"/>
+  <rect x="322" y="126" width="156" height="94" rx="22" fill="#dff0fb" stroke="#0f6db6" stroke-width="6"/>
+  <rect x="300" y="196" width="200" height="374" rx="36" fill="#eef7fd" stroke="#0f6db6" stroke-width="8"/>
+  <text x="84" y="642" fill="#10273f" font-family="Arial, sans-serif" font-size="40" font-weight="700">SC490</text>
+  <text x="84" y="684" fill="#5a7088" font-family="Arial, sans-serif" font-size="24">Modelo de 100 mL preparado localmente</text>
+</svg>

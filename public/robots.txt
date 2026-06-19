@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Google, Bing, etc.
+Sitemap: https://www.wonderstatus.pt/sitemap.xml
+
+# Motores de IA (GPTBot, PerplexityBot, ClaudeBot, Googlebot-Extended)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Ficheiro GEO para IA: https://www.wonderstatus.pt/llms.txt

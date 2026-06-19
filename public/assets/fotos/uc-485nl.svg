@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#f5f9fd"/>
+  <rect x="48" y="48" width="704" height="704" rx="30" fill="#ffffff" stroke="#d8e4ef" stroke-width="4"/>
+  <rect x="338" y="130" width="124" height="92" rx="22" fill="#dff0fb" stroke="#0f6db6" stroke-width="6"/>
+  <rect x="308" y="196" width="184" height="368" rx="34" fill="#eef7fd" stroke="#0f6db6" stroke-width="8"/>
+  <circle cx="294" cy="282" r="16" fill="#0f6db6"/>
+  <circle cx="506" cy="282" r="16" fill="#0f6db6"/>
+  <circle cx="294" cy="478" r="16" fill="#0f6db6"/>
+  <circle cx="506" cy="478" r="16" fill="#0f6db6"/>
+  <text x="84" y="642" fill="#10273f" font-family="Arial, sans-serif" font-size="40" font-weight="700">UC-485NL</text>
+  <text x="84" y="684" fill="#5a7088" font-family="Arial, sans-serif" font-size="24">Placeholder local para producao</text>
+</svg>

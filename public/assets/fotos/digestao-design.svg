@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#f5f9fd"/>
+  <rect x="56" y="56" width="1088" height="688" rx="34" fill="#ffffff" stroke="#d8e4ef" stroke-width="4"/>
+  <rect x="104" y="118" width="218" height="42" rx="21" fill="#eaf3fb"/>
+  <text x="132" y="145" fill="#0f6db6" font-family="Arial, sans-serif" font-size="20" font-weight="700">Design tecnico</text>
+  <g fill="none" stroke="#0f6db6" stroke-width="8">
+    <circle cx="300" cy="348" r="118"/>
+    <circle cx="610" cy="348" r="118"/>
+    <circle cx="920" cy="348" r="118"/>
+  </g>
+  <g fill="#dff0fb" stroke="#0f6db6" stroke-width="6">
+    <path d="M250 284h100v124H250z"/>
+    <path d="M560 252h100v188H560z"/>
+    <path d="M870 268h100v156H870z"/>
+  </g>
+  <text x="104" y="608" fill="#10273f" font-family="Arial, sans-serif" font-size="42" font-weight="700">Vantagens de design</text>
+  <text x="104" y="650" fill="#5a7088" font-family="Arial, sans-serif" font-size="24">Representacao tecnica do produto</text>
+</svg>

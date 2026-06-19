@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#f5f9fd"/>
+  <rect x="56" y="56" width="1088" height="688" rx="34" fill="#ffffff" stroke="#d8e4ef" stroke-width="4"/>
+  <rect x="284" y="224" width="632" height="130" rx="30" fill="#dff0fb" stroke="#0f6db6" stroke-width="8"/>
+  <rect x="366" y="384" width="120" height="180" rx="26" fill="#eef7fd" stroke="#0f6db6" stroke-width="8"/>
+  <rect x="540" y="384" width="120" height="180" rx="26" fill="#eef7fd" stroke="#0f6db6" stroke-width="8"/>
+  <rect x="714" y="384" width="120" height="180" rx="26" fill="#eef7fd" stroke="#0f6db6" stroke-width="8"/>
+  <text x="104" y="608" fill="#10273f" font-family="Arial, sans-serif" font-size="42" font-weight="700">Sistema FilterMate</text>
+  <text x="104" y="650" fill="#5a7088" font-family="Arial, sans-serif" font-size="24">Asset local preparado para producao</text>
+</svg>
