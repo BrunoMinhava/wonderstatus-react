@@ -1,53 +1,53 @@
-# Wonderstatus — Site React
+# Wonderstatus — React Site
 
-Site Wonderstatus reconstruído em React moderno, com Vite, React Router,
-Tailwind CSS e Framer Motion. Mantém o fullscreen inicial com slideshow e
-todo o conteúdo essencial do site original (produtos, marcas, contactos,
-links externos e fotos).
+The Wonderstatus website rebuilt in modern React, with Vite, React Router,
+Tailwind CSS, and Framer Motion. Keeps the original fullscreen intro
+slideshow and all the essential content from the original site (products,
+brands, contacts, external links, and photos).
 
-## Requisitos
+## Requirements
 
-- Node.js 18+ (recomendado LTS 20+)
+- Node.js 18+ (LTS 20+ recommended)
 - npm 9+
 
-## Instalação
+## Installation
 
 ```bash
 npm install
 ```
 
-## Correr em desenvolvimento
+## Running in development
 
 ```bash
 npm run dev
 ```
 
-A aplicação fica disponível em `http://localhost:5173`.
+The app is available at `http://localhost:5173`.
 
-## Build de produção
+## Production build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-Os ficheiros finais ficam em `dist/`.
+The final build output goes to `dist/`.
 
-## Estrutura
+## Structure
 
 ```
 wonderstatus/
 ├── public/
-│   └── assets/              # Imagens, logos, slides (originais do site)
+│   └── assets/              # Images, logos, slides (from the original site)
 │       ├── fotos/
 │       ├── logos/
 │       └── slide1.JPG ... slide6.JPG
 ├── src/
 │   ├── components/
-│   │   ├── HeroSlideshow.jsx        # Slideshow fullscreen preservado
+│   │   ├── HeroSlideshow.jsx        # Fullscreen slideshow, preserved
 │   │   ├── Navbar.jsx
 │   │   ├── Footer.jsx
-│   │   ├── PageHeader.jsx           # Hero parallax para páginas internas
+│   │   ├── PageHeader.jsx           # Parallax hero for inner pages
 │   │   ├── PageTransition.jsx
 │   │   ├── ParallaxSection.jsx
 │   │   ├── ScrollReveal.jsx
@@ -58,20 +58,20 @@ wonderstatus/
 │   │   ├── BrandGrid.jsx
 │   │   ├── TechnicalTabs.jsx
 │   │   └── ContactCTA.jsx
-│   ├── data/                # Conteúdo do site (JS modules)
-│   │   ├── slides.js        # 6 slides do hero
-│   │   ├── categories.js    # 6 áreas principais
-│   │   ├── brands.js        # Todas as marcas com URLs reais
-│   │   ├── contact.js       # Dados de contacto oficiais
+│   ├── data/                # Site content (JS modules)
+│   │   ├── slides.js        # 6 hero slides
+│   │   ├── categories.js    # 6 main areas
+│   │   ├── brands.js        # All brands with real URLs
+│   │   ├── contact.js       # Official contact details
 │   │   ├── water.js
 │   │   ├── ocean.js
 │   │   ├── chemistry.js
 │   │   ├── drones.js
 │   │   └── mycotoxins.js
 │   ├── pages/
-│   │   ├── Home.jsx                 # Homepage com slideshow preservado
-│   │   ├── Sobre.jsx                # Sobre Nós / Contactos + formulário
-│   │   ├── Agua.jsx                 # Sistemas de Produção de Água
+│   │   ├── Home.jsx                 # Homepage with the preserved slideshow
+│   │   ├── Sobre.jsx                # About Us / Contact + form
+│   │   ├── Agua.jsx                 # Water Production Systems
 │   │   ├── Quimica.jsx
 │   │   ├── Oceanografia.jsx
 │   │   ├── Drones.jsx               # Hydra 7
@@ -90,81 +90,80 @@ wonderstatus/
 └── postcss.config.js
 ```
 
-## Funcionalidades
+## Features
 
-### Preservado do site original
-- Fullscreen inicial com slideshow (6 slides, títulos e links mantidos)
-- Todos os nomes de produtos (Water 75, Water 75 XL, Water 300, WaterControl,
+### Preserved from the original site
+- Fullscreen intro slideshow (6 slides, titles and links kept)
+- All product names (Water 75, Water 75 XL, Water 300, WaterControl,
   Dispensador, WaterGuard, Pré-Tratamento, Hydra 7, WiSens TD/Wave/CTD/DO/
   Cloro-A/TBD, WiMo, WiHub, etc.)
-- Todas as marcas e URLs externos reais (Glass Expansion, Elemental
+- All brands and real external URLs (Glass Expansion, Elemental
   Microanalysis, Hydrobios, WildCo, NKE, Auxilab, CHM, Umura, CRUMA, JP
   Selecta, Thermo, Agilent, PerkinElmer, Shimadzu, Hitachi, GBC, etc.)
-- Dados de contacto (Wonderstatus Unipessoal Lda · geral@wonderstatus.pt ·
+- Contact details (Wonderstatus Unipessoal Lda · geral@wonderstatus.pt ·
   +351 259 931 174 · Mercado Municipal, Loja 6, 5060-327 Sabrosa)
-- Tabelas técnicas (ASTM, WiMo, WiSens), processo de purificação em 8 etapas,
-  especificações completas
-- Fotos dos produtos (Water 75, 75 XL, 300, WaterControl, Dispensador,
-  WaterGuard, Pré-tratamento, logos de todas as marcas)
-- Formulário de contacto central a enviar para `formsubmit.co` (mantido o
-  endpoint original)
+- Technical tables (ASTM, WiMo, WiSens), the 8-step purification process,
+  full specifications
+- Product photos (Water 75, 75 XL, 300, WaterControl, Dispensador,
+  WaterGuard, Pré-tratamento, and every brand's logo)
+- Central contact form posting to `formsubmit.co` (original endpoint kept)
 
-### Novo design
-- Paleta branco / azul / cinza suave com gradientes elegantes
-- Glassmorphism subtil em cards e painéis
-- Tipografia dupla: Plus Jakarta Sans (corpo) + Sora (display)
-- Navbar moderna com transparência na home e sólida ao fazer scroll
-- Menu mobile com drawer animado
-- Rodapé premium com blobs decorativos
-- Hero de cada página com parallax real
+### New design
+- White / blue / soft-gray palette with elegant gradients
+- Subtle glassmorphism on cards and panels
+- Dual typography: Plus Jakarta Sans (body) + Sora (display)
+- Modern navbar, transparent on the homepage and solid on scroll
+- Mobile menu with an animated drawer
+- Premium footer with decorative blobs
+- Real parallax hero on every page
 
-### Animações (Framer Motion)
-- Slideshow com zoom lento e transições fade cross-dissolve
-- Parallax no hero das páginas internas
+### Animations (Framer Motion)
+- Slideshow with slow zoom and cross-dissolve fade transitions
+- Parallax on inner-page heroes
 - Scroll reveal (fade / slide-up / slide-left / slide-right / zoom)
-- Hover nos cards com elevação e sombra animada
-- Transições de página no React Router
-- Marquee de marcas na homepage
+- Card hover with animated elevation and shadow
+- Page transitions via React Router
+- Brand marquee on the homepage
 
-## Formulário de contacto
+## Contact form
 
-O formulário em `/sobre#formulario-contacto` envia os dados por `fetch` POST
-JSON para `https://formsubmit.co/ajax/geral@wonderstatus.pt` (o mesmo endpoint
-do site original). Os campos honeypot estão incluídos como proteção
-anti-spam.
+The form at `/sobre#formulario-contacto` submits via `fetch` POST as JSON
+to `https://formsubmit.co/ajax/geral@wonderstatus.pt` (the same endpoint
+used by the original site). Honeypot fields are included as anti-spam
+protection.
 
-Se quiser substituir o destino, altere `endpoint` em `src/data/contact.js`.
+To change the destination, edit `endpoint` in `src/data/contact.js`.
 
-## Navegação
+## Routes
 
-Rotas disponíveis:
+Available routes:
 
-| Rota                      | Página                        |
-|---------------------------|-------------------------------|
-| `/`                       | Home (slideshow fullscreen)   |
-| `/material-laboratorio`   | Material de Laboratório       |
-| `/oceanografia`           | Oceanografia                  |
-| `/agua`                   | Sistemas de Produção de Água  |
-| `/quimica`                | Química                       |
-| `/drones`                 | Drones (Hydra 7)              |
-| `/micotoxinas`            | Micotoxinas                   |
-| `/produtos`               | Produtos e Consumíveis        |
-| `/marcas`                 | Todas as Marcas               |
-| `/sobre`                  | Sobre Nós / Contactos         |
+| Route                      | Page                           |
+|---------------------------|---------------------------------|
+| `/`                       | Home (fullscreen slideshow)     |
+| `/material-laboratorio`   | Lab Equipment                   |
+| `/oceanografia`           | Oceanography                    |
+| `/agua`                   | Water Production Systems        |
+| `/quimica`                | Chemistry                       |
+| `/drones`                 | Drones (Hydra 7)                |
+| `/micotoxinas`            | Mycotoxins                      |
+| `/produtos`               | Products & Consumables          |
+| `/marcas`                 | All Brands                      |
+| `/sobre`                  | About Us / Contacts             |
 
-## Tecnologias
+## Tech stack
 
-- **React 18** — biblioteca de UI
-- **Vite 5** — dev server e build
-- **React Router 6** — routing SPA
-- **Framer Motion 11** — animações e transições
-- **Tailwind CSS 3** — utilitários de estilo
+- **React 18** — UI library
+- **Vite 5** — dev server and build
+- **React Router 6** — SPA routing
+- **Framer Motion 11** — animations and transitions
+- **Tailwind CSS 3** — utility-first styling
 
-## Notas
+## Notes
 
-- Projeto limpo, sem código legado do site anterior
-- Componentes reutilizáveis em `src/components/`
-- Dados centralizados em `src/data/` — fácil de editar conteúdo sem mexer no
-  layout
-- Responsivo: computador, tablet e telemóvel
-- Sem dependência de jQuery, GSAP ou scripts externos no HTML
+- Clean project, no legacy code from the previous site
+- Reusable components under `src/components/`
+- Content centralized in `src/data/` — easy to edit content without
+  touching the layout
+- Responsive: desktop, tablet, and mobile
+- No dependency on jQuery, GSAP, or external scripts in the HTML
