@@ -1,11 +1,13 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
 import ContactCTA from '../components/ContactCTA';
 import PageTransition from '../components/PageTransition';
+import QuimicaTabRail from '../components/QuimicaTabRail';
 import ZoomableImage from '../components/Lightbox';
 import graphiteData from '../data/grafite-catalog-data';
 
@@ -27,16 +29,23 @@ export default function QuimicaTubosGrafite() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Tubos de Grafite para Fornos de Grafite AAS"
+        description="Tubos de grafite com ou sem plataforma L'Vov para AAS de forno de grafite (GFAAS/ETAAS). Compatíveis com Agilent/Varian, Hitachi, PerkinElmer, Shimadzu e GBC. Alternativa de qualidade equivalente."
+        path="/quimica/tubos-grafite"
+      />
       <PageHeader
         kicker="AAS · Tubos de Grafite"
         title="Tubos de Grafite para AAS"
         subtitle="Gama dedicada Thermo Scientific e linhas equivalentes para instrumentos Agilent, GBC, Hitachi, PerkinElmer e Shimadzu, com tabelas técnicas por fabricante."
-        image="/assets/slide4.JPG"
+        image="/assets/fotos/quimica-grafite.png"
+        noParallax
         actions={[
           { label: 'Explorar tabelas', href: '#tabela' },
           { label: 'Pedir informação', href: '/sobre#formulario-contacto', ghost: true }
         ]}
       />
+      <QuimicaTabRail />
 
       <section className="section" id="tabela">
         <div className="container-wide">

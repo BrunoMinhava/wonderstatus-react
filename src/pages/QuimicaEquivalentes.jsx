@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -76,6 +77,11 @@ export default function QuimicaEquivalentes() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title={`Tubos de Grafite ${brand.name} — Equivalentes e Compatíveis`}
+        description={brandMeta.subtitle}
+        path={`/quimica/equivalentes/${brandSlug}`}
+      />
       <PageHeader
         kicker={isThermoMain ? 'AAS · Tubos de Grafite' : 'AAS · Equivalências Thermo'}
         title={`${titlePrefix}${brand.name}`}

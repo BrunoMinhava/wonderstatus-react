@@ -149,8 +149,7 @@ export default function CatalogBrowser({ brands = [], sections = [], searchPlace
                 {(activeBrand.siteUrl || activeBrand.categoryUrl) && (
                   <a
                     href={activeBrand.categoryUrl || activeBrand.siteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-4 py-2 text-sm font-semibold text-brand-700 hover:bg-brand-50 transition-colors flex-shrink-0 self-start md:self-center"
                   >
                     Site oficial
@@ -234,8 +233,7 @@ export default function CatalogBrowser({ brands = [], sections = [], searchPlace
                   </p>
                   <a
                     href={activeBrand.siteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target="_blank" rel="noopener noreferrer"
                     className="btn-primary inline-flex"
                   >
                     Abrir site oficial {activeBrand.name}
@@ -407,8 +405,7 @@ function ProductCard({ family, index }) {
                     {itemUrl ? (
                       <a
                         href={itemUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target="_blank" rel="noopener noreferrer"
                         className="text-ink-700 hover:text-brand-700 transition-colors text-xs"
                       >
                         {itemName}
@@ -432,8 +429,7 @@ function ProductCard({ family, index }) {
         {url && (
           <a
             href={url}
-            target="_blank"
-            rel="noopener noreferrer"
+            target="_blank" rel="noopener noreferrer"
             className="mt-auto pt-4 inline-flex items-center justify-between gap-2 text-sm font-semibold text-brand-700 hover:text-brand-800 group/link"
           >
             <span>Ver no site oficial</span>

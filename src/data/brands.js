@@ -178,6 +178,16 @@ export const brandsByArea = {
       summary: 'Soluções e acessórios de produção própria — suportes 3D impressos para micropipetas e instrumentação laboratorial.'
     }
   ],
+  peixeZebra: [
+    {
+      id: 'viewpoint',
+      name: 'Viewpoint',
+      logo: '/assets/logos/viewpoint.svg',
+      url: 'https://www.viewpoint.fr/products/zebrafish',
+      note: 'Sistemas de rastreamento comportamental para peixe zebra — de embrião a adulto. ZebraBox, ZebraLab, VisioBox, ZebraTower e mais.',
+      internal: '/peixe-zebra',
+    }
+  ],
   aas: [
     {
       id: 'thermo',
@@ -282,7 +292,7 @@ export const allBrands = [
   { id: 'lgc', name: 'LGC Standards', logo: '/assets/logos/lgc-standards.svg', url: 'https://www.lgcstandards.com/' },
   { id: 'rofa', name: 'ROFA France', logo: '/assets/logos/rofa-france.svg', url: 'https://rofafrance.com/certified-reference-material-list-en/' },
   { id: 'nist', name: 'NIST', logo: '/assets/logos/nist.svg', url: 'https://www.nist.gov/srm' },
-  { id: 'vki', name: 'VKI (Eurofins)', logo: '/assets/logos/vki.svg', url: 'https://www.eurofins.dk/miljoe/vores-ydelser/vki-certificerede-referencematerialer/information-in-english/' },
+  { id: 'vki', name: 'VKI (Eurofins)', logo: '/assets/logos/vki.svg', url: 'https://www.eurofins.dk/miljoe/analyser-og-maalinger/vki-certificerede-referencematerialer/information-in-english/material-safety-data-sheets/' },
   { id: 'eccc', name: 'Environment Canada (ECCC)', logo: '/assets/logos/eccc.svg', url: 'https://www.canada.ca/en/environment-climate-change.html' },
   { id: 'nrc-canada', name: 'NRC Canada', logo: '/assets/logos/nrc-canada.svg', url: 'https://nrc.canada.ca/en/certifications-evaluations-standards/certified-reference-materials/list' },
   { id: 'jrc-erm', name: 'JRC — ERM', logo: '/assets/logos/jrc-erm.svg', url: 'https://crm.jrc.ec.europa.eu/' },

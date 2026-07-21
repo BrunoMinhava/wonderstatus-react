@@ -1,3 +1,4 @@
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -9,6 +10,11 @@ import { Link } from 'react-router-dom';
 export default function QuimicaLampadasMono() {
   return (
     <PageTransition>
+      <PageMeta
+        title="Lâmpadas de Cátodo Oco Mono-Elementares para AAS"
+        description="Lâmpadas de cátodo oco mono-elementares para espectroscopia de absorção atómica. Disponíveis para todos os elementos. Compatíveis com Agilent, PerkinElmer, Hitachi, Shimadzu e GBC."
+        path="/quimica/lampadas-mono"
+      />
       <PageHeader
         kicker="Subgrupo · Lâmpadas de Cátodo Oco"
         title="Lâmpadas de Cátodo Oco Mono-Elementares"

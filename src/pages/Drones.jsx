@@ -1,3 +1,4 @@
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import ProductGallery from '../components/ProductGallery';
 import SectionHead from '../components/SectionHead';
@@ -9,6 +10,11 @@ import { hydra7 } from '../data/drones';
 export default function Drones() {
   return (
     <PageTransition>
+      <PageMeta
+        title="Drones para Monitorização Ambiental e Oceanográfica"
+        description="UAVs e drones para monitorização ambiental, levantamentos costeiros, recolha de amostras e vigilância aquática. Soluções integradas com sensores ambientais e oceanográficos."
+        path="/drones"
+      />
       <PageHeader
         kicker="Drones"
         title={hydra7.name}

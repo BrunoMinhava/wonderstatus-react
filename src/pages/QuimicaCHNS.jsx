@@ -1,11 +1,13 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
 import BrandGrid from '../components/BrandGrid';
 import ContactCTA from '../components/ContactCTA';
 import PageTransition from '../components/PageTransition';
+import QuimicaTabRail from '../components/QuimicaTabRail';
 import { brandsByArea } from '../data/brands';
 import chnsData from '../data/chns-toc-catalog-data';
 
@@ -23,16 +25,23 @@ export default function QuimicaCHNS() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Consumíveis para Análise CHNS, TOC e Elementar"
+        description="Consumíveis para analisadores CHNS-O e TOC: cápsulas de estanho e prata, barcos de combustão, reagentes e catalisadores. Compatíveis com Elementar, Thermo, Leco, Costech e EuroVector."
+        path="/quimica/chns-toc"
+      />
       <PageHeader
         kicker="Química · CHN/O/S · TOC"
         title="Consumíveis para CHN/O/S, TOC e Análise Elementar"
         subtitle="Acesso direto por aplicação e fabricante — Micro (CHN/O/S), Inorgânicos (C/S, N/O, H), Carbon/Sulphur, N Protein, Trace/TOC e Macro CHN/NC/NCS."
-        image="/assets/slide4.JPG"
+        image="/assets/fotos/quimica-consumiveis.png"
+        noParallax
         actions={[
           { label: 'Ver aplicações', href: '#aplicações' },
           { label: 'Pedir informação', href: '/sobre#formulario-contacto', ghost: true }
         ]}
       />
+      <QuimicaTabRail />
 
       {/* Categorias principais */}
       <section className="section">
@@ -143,8 +152,7 @@ export default function QuimicaCHNS() {
                       <motion.a
                         key={i}
                         href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target="_blank" rel="noopener noreferrer"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: i * 0.03 }}

@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -105,8 +107,7 @@ function PdfModal({ url, title, onClose }) {
               <div className="flex items-center gap-2">
                 <a
                   href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold transition-colors"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -139,10 +140,8 @@ function PdfModal({ url, title, onClose }) {
               </div>
             </div>
 
-            {/* PDF embed — more reliable than iframe across browsers */}
-            <embed
+            <iframe
               src={`${url}#toolbar=1&navpanes=0`}
-              type="application/pdf"
               title={title}
               className="flex-1 w-full border-0"
             />
@@ -155,9 +154,23 @@ function PdfModal({ url, title, onClose }) {
 
 export default function MateriaisReferencia() {
   const [pdfModal, setPdfModal] = useState(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 400);
+  }, [location.hash]);
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Materiais de Referência Certificados — ROFA, LGC, NIST, NRC"
+        description="Materiais de referência certificados (CRM) para laboratórios de controlo de qualidade e acreditação. Representante exclusivo ROFA France. Distribuição: LGC Standards, NIST, NRC Canada, VKI, JRC-ERM e BAS."
+        path="/materiais-referencia"
+      />
       <PdfModal
         url={pdfModal?.url}
         title={pdfModal?.title}
@@ -263,7 +276,7 @@ export default function MateriaisReferencia() {
               );
 
               return (
-                <ScrollReveal key={brand.id} delay={idx * 0.06} className="h-full">
+                <ScrollReveal key={brand.id} id={brand.id} delay={idx * 0.06} className="h-full">
                   {brand.pdfUrl ? (
                     <button
                       type="button"
@@ -275,8 +288,7 @@ export default function MateriaisReferencia() {
                   ) : (
                     <a
                       href={brand.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target="_blank" rel="noopener noreferrer"
                       className="group block h-full rounded-2xl bg-white border border-ink-100 shadow-soft p-6 card-hover"
                     >
                       {cardContent}
@@ -343,8 +355,7 @@ export default function MateriaisReferencia() {
                   <div className="mt-auto pt-4 border-t border-ink-100">
                     <a
                       href={brand.catalogUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target="_blank" rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 hover:text-brand-600 transition-colors"
                     >
                       Ver catálogo
@@ -371,8 +382,7 @@ export default function MateriaisReferencia() {
           <ScrollReveal className="mt-8 md:mt-10">
             <a
               href="https://osil.com/product/salinity-bottles-and-crates/"
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="group block rounded-2xl bg-white border border-ink-100 shadow-soft p-6 md:p-8 card-hover max-w-2xl"
             >
               <div className="flex items-start gap-4">
@@ -412,8 +422,7 @@ export default function MateriaisReferencia() {
             <ScrollReveal className="h-full">
               <a
                 href="https://nrc.canada.ca/en/certifications-evaluations-standards/certified-reference-materials/list"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="group flex flex-col h-full rounded-2xl bg-white border border-ink-100 shadow-soft p-6 card-hover"
               >
                 <div className="flex items-start justify-between gap-2 mb-4">
@@ -448,8 +457,7 @@ export default function MateriaisReferencia() {
             <ScrollReveal delay={0.07} className="h-full">
               <a
                 href="https://crm.jrc.ec.europa.eu/en/crms/?Keywords=ERM-BF419a"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="group flex flex-col h-full rounded-2xl bg-white border border-ink-100 shadow-soft p-6 card-hover"
               >
                 <div className="flex items-start justify-between gap-2 mb-4">
@@ -484,8 +492,7 @@ export default function MateriaisReferencia() {
             <ScrollReveal delay={0.14} className="h-full">
               <a
                 href="https://www.basrid.co.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="group flex flex-col h-full rounded-2xl bg-white border border-ink-100 shadow-soft p-6 card-hover"
               >
                 <div className="flex items-start justify-between gap-2 mb-4">

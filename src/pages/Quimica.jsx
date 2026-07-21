@@ -1,12 +1,14 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
 import BrandGrid from '../components/BrandGrid';
 import ContactCTA from '../components/ContactCTA';
 import PageTransition from '../components/PageTransition';
+import QuimicaTabRail from '../components/QuimicaTabRail';
 import { brandsByArea, padroesBrands } from '../data/brands';
 
 const quimicaCategorias = [
@@ -36,26 +38,23 @@ const quimicaCategorias = [
     description: 'Cápsulas, reagentes, tubos de quartzo, padrões de calibração e acessórios para análise elementar.',
     tag: 'CHNS · TOC'
   },
-  {
-    to: '/quimica/digestao',
-    title: 'Digestor de Metais e Ácidos',
-    description: 'Tubos, FilterMate/FlipMate, HotBlock, AutoBlock e FAQ técnico para digestão de metais e preparação de amostras.',
-    tag: 'Preparação'
-  }
 ];
 
 const padroesCategories = [
   {
+    id: 'padroes-inorganicos',
     tag: 'Inorgânicos',
     title: 'Padrões Inorgânicos',
     description: 'Soluções padrão de metais, aniões e catiões para AAS, ICP-OES e ICP-MS. Certificados com rastreabilidade NIST.',
     color: 'from-sky-600 to-brand-500',
     brands: [
       { name: 'CPAChem', logo: '/assets/logos/cpachem.svg', note: 'Metais, aniões, catiões — ISO 17034', href: 'https://www.cpachem.com/catalog/products' },
-      { name: 'Techlab', logo: '/assets/logos/techlab.png', note: 'Padrões inorgânicos certificados', href: 'https://www.techlab.fr/' }
+      { name: 'Techlab', logo: '/assets/logos/techlab.png', note: 'Padrões inorgânicos certificados', href: 'https://www.techlab.fr/' },
+      { name: 'HPC Standards', logo: '/assets/logos/hpc-standards.png', note: 'Padrões inorgânicos de alta pureza', href: 'https://www.hpc-standards.com/' }
     ]
   },
   {
+    id: 'padroes-organicos',
     tag: 'Orgânicos',
     title: 'Padrões Orgânicos',
     description: 'Padrões para pesticidas, PAHs, PCBs, solventes e compostos orgânicos voláteis. Múltiplos fornecedores e concentrações.',
@@ -67,6 +66,7 @@ const padroesCategories = [
     ]
   },
   {
+    id: 'padroes-petroquimicos',
     tag: 'Petroquímicos',
     title: 'Padrões Petroquímicos',
     description: 'Referências certificadas para análise de combustíveis, óleos, lubrificantes e produtos petroquímicos.',
@@ -125,8 +125,7 @@ function PadroesModal({ category, onClose }) {
               <a
                 key={brand.name}
                 href={brand.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="group/b flex items-center gap-3 rounded-xl border border-ink-100 bg-ink-50/50 hover:bg-brand-50 hover:border-brand-200 px-3 py-3 transition-colors"
               >
                 <div className="h-10 w-16 flex-shrink-0 rounded-lg bg-white border border-ink-100 grid place-items-center p-1.5">
@@ -150,18 +149,35 @@ function PadroesModal({ category, onClose }) {
 
 export default function Quimica() {
   const [activeCategory, setActiveCategory] = useState(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 400);
+  }, [location.hash]);
+
   return (
     <PageTransition>
+      <PageMeta
+        title="Química Analítica — Consumíveis AAS, ICP e CHNS"
+        description="Consumíveis e acessórios para espectroscopia de absorção atómica (AAS), ICP, ICP-MS e CHNS. Lâmpadas de cátodo oco, tubos de grafite, cones e nebulizadores multimarca."
+        path="/quimica"
+      />
       <PageHeader
         kicker="Química Analítica e Consumíveis"
-        title="AAS, IC, ICP, CHNS, Digestão de Metais"
-        subtitle="Consumíveis e equipamentos para AAS, IC, ICP, CHNS e digestão de metais, com compatibilidade multimarca e seleção por aplicação."
+        title="AAS, IC, ICP e CHNS"
+        subtitle="Consumíveis e equipamentos para AAS, IC, ICP e CHNS, com compatibilidade multimarca e seleção por aplicação."
         image="/assets/slide4.JPG"
+        noParallax
         actions={[
           { label: 'Explorar soluções', href: '#categorias' },
           { label: 'Solicitar informação', href: '/sobre#formulario-contacto', ghost: true }
         ]}
       />
+      <QuimicaTabRail />
 
       {/* ── Padrões Analíticos ── */}
       <section className="section" id="padroes">
@@ -174,7 +190,7 @@ export default function Quimica() {
 
           <div className="mt-8 md:mt-10 grid sm:grid-cols-3 gap-5">
             {padroesCategories.map((cat) => (
-              <ScrollReveal key={cat.tag}>
+              <ScrollReveal key={cat.tag} id={cat.id}>
                 <button
                   type="button"
                   onClick={() => setActiveCategory(cat)}
@@ -235,7 +251,7 @@ export default function Quimica() {
         <div className="container-wide">
           <SectionHead
             kicker="Categorias Principais"
-            title="Consumíveis para equipamentos AAS, ICP, CHNS e digestão"
+            title="Consumíveis para equipamentos AAS, ICP e CHNS"
             description="Clique em cada categoria para abrir o catálogo detalhado com produtos, fotos, tabelas e referências."
           />
 

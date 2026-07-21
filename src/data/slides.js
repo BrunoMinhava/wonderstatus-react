@@ -21,7 +21,13 @@ export const slides = [
     image: '/assets/slide4.JPG',
     link: '/quimica',
     title: 'Química',
-    subtitle: 'AAS, ICP, CHNS e digestão'
+    subtitle: 'AAS, ICP e CHNS'
+  },
+  {
+    image: '/assets/fotos/viewpoint/zebrafish-banner.jpg',
+    link: '/peixe-zebra',
+    title: 'Peixe Zebra',
+    subtitle: 'ZebraBox, ZebraLab, VisioBox e mais'
   },
   {
     image: '/assets/fotos/drones/taurus-x8-banner.jpg',

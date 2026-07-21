@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -18,6 +19,7 @@ const marcasConfig = {
     brandKicker: 'Marca representada',
     brandDescription: 'WildCo é a referência internacional para garrafas Van Dorn — horizontal e vertical, em PVC ou acrílico, desde 2,2 L até 8,2 L, com kits completos e peças de manutenção.',
     siteUrl: 'https://store.sciencefirst.com/wildcoenvironmentalsampling',
+    heroImage: '/assets/fotos/oceanografia/wildco-van-dorn-horizontal.jpg',
   },
   northlift: {
     kicker: 'Oceanografia · Guinchos de Campo',
@@ -29,6 +31,7 @@ const marcasConfig = {
     brandKicker: 'Marca representada',
     brandDescription: 'NorthLift oferece guinchos robustos para uso em campo oceanográfico — desde levantamentos costeiros até campanhas em oceano aberto.',
     siteUrl: 'https://www.northlift.com/electric-haulers',
+    heroImage: '/assets/slide2.JPG',
   },
   'general-oceanics': {
     kicker: 'Oceanografia · Instrumentação Clássica',
@@ -40,6 +43,7 @@ const marcasConfig = {
     brandKicker: 'Marca representada',
     brandDescription: 'General Oceanics é uma das marcas mais reconhecidas em instrumentação oceanográfica clássica, com décadas de presença em campanhas de investigação em todo o mundo.',
     siteUrl: 'https://www.generaloceanics.com/',
+    heroImage: '/assets/slide2.JPG',
   },
   'aquatic-biotechnology': {
     kicker: 'Oceanografia · Plankton e Amostragem',
@@ -51,6 +55,7 @@ const marcasConfig = {
     brandKicker: 'Marca representada',
     brandDescription: 'Aquatic-Biotechnology desenvolve equipamento especializado para monitorização e investigação de ambientes aquáticos — redes, amostradores e material de análise de plankton.',
     siteUrl: 'https://aquaticbiotechnology.com/',
+    heroImage: '/assets/slide2.JPG',
   },
   'kc-denmark': {
     kicker: 'Oceanografia · Amostragem e Sedimento',
@@ -62,6 +67,7 @@ const marcasConfig = {
     brandKicker: 'Marca representada',
     brandDescription: 'KC-Denmark é uma empresa dinamarquesa com longa tradição no desenvolvimento de equipamento para investigação marinha — rosettes, amostradores, corers e grabs reconhecidos internacionalmente.',
     siteUrl: 'https://www.kc-denmark.dk/',
+    heroImage: '/assets/slide2.JPG',
   },
   osil: {
     kicker: 'Oceanografia · Instrumentação e Observação',
@@ -73,6 +79,7 @@ const marcasConfig = {
     brandKicker: 'Marca representada',
     brandDescription: 'Osil especializa-se em soluções integradas para observação oceânica e instrumentação de campanhas — desde simples garrafas Niskin a bóias oceanográficas de larga escala.',
     siteUrl: 'https://osil.com/',
+    heroImage: '/assets/fotos/osil/profiling-buoys.jpg',
   },
 };
 
@@ -130,8 +137,7 @@ function ProductCard({ product, brandName, delay = 0, accentKicker }) {
     <ScrollReveal delay={delay}>
       <a
         href={product.url}
-        target="_blank"
-        rel="noopener noreferrer"
+        target="_blank" rel="noopener noreferrer"
         className="group flex flex-col rounded-2xl bg-white border border-ink-100 shadow-soft overflow-hidden card-hover h-full"
       >
         <div className="bg-gradient-to-b from-brand-50/40 to-white flex items-center justify-center p-4 h-44">
@@ -182,11 +188,16 @@ export default function OceanografiaMarca({ brandId }) {
 
   return (
     <PageTransition>
+      <PageMeta
+        title={config.title}
+        description={config.subtitle}
+        path={`/oceanografia/${brandId}`}
+      />
       <PageHeader
         kicker={config.kicker}
         title={config.title}
         subtitle={config.subtitle}
-        image="/assets/slide2.JPG"
+        image={config.heroImage || '/assets/slide2.JPG'}
         actions={[
           { label: 'Ver produtos', href: '#produtos' },
           { label: 'Site oficial', href: config.siteUrl, ghost: true },
@@ -220,8 +231,7 @@ export default function OceanografiaMarca({ brandId }) {
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
               href={config.siteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className={`inline-flex items-center gap-2 rounded-full ${accent.btn} text-white font-semibold px-5 py-2.5 text-sm transition-all`}
             >
               Site oficial

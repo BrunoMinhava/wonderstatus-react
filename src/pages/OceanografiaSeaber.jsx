@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -123,11 +124,16 @@ const commonSpecs = [
 export default function OceanografiaSeaber() {
   return (
     <PageTransition>
+      <PageMeta
+        title="Micro-AUVs para Oceanografia — Seaber YUCO"
+        description="Micro-AUVs (veículos autónomos subaquáticos) Seaber YUCO para monitorização oceanográfica, mapeamento de fundo e recolha de dados CTD em ambientes costeiros e offshore."
+        path="/oceanografia/seaber"
+      />
       <PageHeader
         kicker="Oceanografia · Veículos Autónomos Subaquáticos"
         title="Micro-AUVs — Seaber YUCO"
         subtitle="Micro-AUVs compactos, modulares e acessíveis para investigação oceanográfica. 8 variantes YUCO com payloads intercambiáveis: CTD, SCAN, PHYSICO, PAM, LUMEN, eDNA, CARRIER e 3DSS."
-        image="/assets/slide2.JPG"
+        image="/assets/fotos/oceanografia/seaber/3dss-photo2.jpg"
         actions={[
           { label: 'Ver modelos YUCO', href: '#yuco' },
           { label: 'Especificações técnicas', href: '#specs', ghost: true },
@@ -169,8 +175,7 @@ export default function OceanografiaSeaber() {
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
               href="https://seaber.fr/"
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-blue-500 hover:bg-blue-400 text-white font-semibold px-5 py-2.5 text-sm transition-all"
             >
               Site oficial Seaber

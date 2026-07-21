@@ -10,7 +10,8 @@ export default function PageHeader({
   actions,
   children,
   overlay = 'linear-gradient(180deg, rgba(5,20,40,0.72) 0%, rgba(5,20,40,0.45) 40%, rgba(5,20,40,0.78) 100%)',
-  minHeight = 'min-h-[520px] md:min-h-[60vh]'
+  minHeight = 'min-h-[520px] md:min-h-[60vh]',
+  noParallax = false,
 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -28,7 +29,10 @@ export default function PageHeader({
       className={`relative ${minHeight} flex items-center overflow-hidden pt-24 pb-12 md:pt-32 md:pb-20`}
     >
       {image && (
-        <motion.div className="absolute inset-0 -z-20" style={{ y, scale }}>
+        <motion.div
+          className="absolute inset-0 -z-20"
+          style={noParallax ? {} : { y, scale }}
+        >
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${image})` }}
@@ -84,12 +88,23 @@ export default function PageHeader({
                     </button>
                   );
                 }
+                if (typeof a.onClick === 'function') {
+                  return (
+                    <button
+                      key={a.label}
+                      type="button"
+                      onClick={a.onClick}
+                      className={a.ghost ? 'btn-outline-light' : 'btn-primary'}
+                    >
+                      {a.label}
+                    </button>
+                  );
+                }
                 return a.external ? (
                   <a
                     key={a.label}
                     href={a.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target="_blank" rel="noopener noreferrer"
                     className={a.ghost ? 'btn-outline-light' : 'btn-primary'}
                   >
                     {a.label}

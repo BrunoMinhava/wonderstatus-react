@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -50,6 +51,11 @@ export default function Micotoxinas() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Detecção de Micotoxinas — Kits Rápidos e ELISA"
+        description="Kits de detecção rápida (lateral flow) e ELISA para micotoxinas em cereais, alimentos e rações: aflatoxinas, DON, fumonisinas, OTA, zearalenona e T-2/HT-2."
+        path="/micotoxinas"
+      />
       <PageHeader
         kicker="Referência Analítica Avançada"
         title="Padrões e Soluções para Análise de Micotoxinas"

@@ -40,6 +40,16 @@ export const categories = [
     highlights: ['AAS e ICP/ICP-MS', 'CHN/O/S e TOC', 'Digestão de metais']
   },
   {
+    slug: 'peixe-zebra',
+    name: 'Peixe Zebra',
+    shortName: 'Peixe Zebra',
+    description:
+      'Equipamentos de rastreamento comportamental para peixe zebra — ZebraBox, ZebraLab, VisioBox, ZebraTower e mais.',
+    image: '/assets/fotos/viewpoint/zebrafish-banner.jpg',
+    icon: 'fish',
+    highlights: ['Embrião · Larva · Adulto', 'Comportamento e cognição', 'Cardiologia e visão']
+  },
+  {
     slug: 'drones',
     name: 'Drones',
     shortName: 'Drones',

@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -22,6 +23,11 @@ export default function QuimicaLampadasD2() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Lâmpadas de Deutério D2 para Correção de Fundo AAS"
+        description="Lâmpadas de deutério (D2) para correção de fundo em espectroscopia de absorção atómica. Compatíveis com Agilent, Hitachi, PerkinElmer, Shimadzu e GBC."
+        path="/quimica/lampadas-d2"
+      />
       <PageHeader
         kicker="AAS · Correção de Fundo"
         title="Lâmpadas de Deutério D2"

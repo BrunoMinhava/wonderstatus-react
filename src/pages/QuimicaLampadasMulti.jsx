@@ -1,3 +1,4 @@
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -9,6 +10,11 @@ import { Link } from 'react-router-dom';
 export default function QuimicaLampadasMulti() {
   return (
     <PageTransition>
+      <PageMeta
+        title="Lâmpadas de Cátodo Oco Multi-Elementares para AAS"
+        description="Lâmpadas de cátodo oco multi-elementares para espectroscopia de absorção atómica. Ideal para determinação simultânea de vários metais. Compatíveis com Agilent, PerkinElmer, Hitachi e Shimadzu."
+        path="/quimica/lampadas-multi"
+      />
       <PageHeader
         kicker="Subgrupo · Lâmpadas de Cátodo Oco"
         title="Lâmpadas de Cátodo Oco Multi-Elementares"

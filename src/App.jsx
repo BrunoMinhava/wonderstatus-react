@@ -1,7 +1,8 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useScroll, useVelocity, useTransform, useSpring } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { lazy, Suspense, useState, useEffect } from 'react';
 import Lenis from 'lenis';
+import { HelmetProvider } from 'react-helmet-async';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -11,39 +12,51 @@ import RatingPopup from './components/RatingPopup';
 import CustomCursor from './components/CustomCursor';
 import GlobalSearch from './components/GlobalSearch';
 import ContactModal from './components/ContactModal';
-
-import Home from './pages/Home';
-import Sobre from './pages/Sobre';
-import Agua from './pages/Agua';
-import Quimica from './pages/Quimica';
-import QuimicaLampadas from './pages/QuimicaLampadas';
-import QuimicaLampadasMono from './pages/QuimicaLampadasMono';
-import QuimicaLampadasMulti from './pages/QuimicaLampadasMulti';
-import QuimicaLampadasD2 from './pages/QuimicaLampadasD2';
-import QuimicaLampadasTodosAA from './pages/QuimicaLampadasTodosAA';
-import QuimicaTubosGrafite from './pages/QuimicaTubosGrafite';
-import QuimicaEquivalentes from './pages/QuimicaEquivalentes';
-import QuimicaICP from './pages/QuimicaICP';
-import QuimicaCHNS from './pages/QuimicaCHNS';
-import QuimicaDigestao from './pages/QuimicaDigestao';
-import Oceanografia from './pages/Oceanografia';
-import OceanografiaNKE from './pages/OceanografiaNKE';
-import OceanografiaHydrobios from './pages/OceanografiaHydrobios';
-import OceanografiaSeaber from './pages/OceanografiaSeaber';
-import OceanografiaMarca from './pages/OceanografiaMarca';
-import Drones from './pages/Drones';
-import Micotoxinas from './pages/Micotoxinas';
-import MaterialLaboratorio from './pages/MaterialLaboratorio';
-import Produtos from './pages/Produtos';
-import ProdutoDetalhe from './pages/ProdutoDetalhe';
-import Marcas from './pages/Marcas';
-import MateriaisReferencia from './pages/MateriaisReferencia';
-import PoliticaPrivacidade from './pages/PoliticaPrivacidade';
-import NotFound from './pages/NotFound';
 import CookieBanner from './components/CookieBanner';
 import FloatingContact from './components/FloatingContact';
 import AnnouncementBar from './components/AnnouncementBar';
 import BackToTop from './components/BackToTop';
+
+// Lazy-loaded pages — each page becomes its own JS chunk (faster initial load)
+const Home                  = lazy(() => import('./pages/Home'));
+const Sobre                 = lazy(() => import('./pages/Sobre'));
+const Agua                  = lazy(() => import('./pages/Agua'));
+const Quimica               = lazy(() => import('./pages/Quimica'));
+const QuimicaLampadas       = lazy(() => import('./pages/QuimicaLampadas'));
+const QuimicaLampadasMono   = lazy(() => import('./pages/QuimicaLampadasMono'));
+const QuimicaLampadasMulti  = lazy(() => import('./pages/QuimicaLampadasMulti'));
+const QuimicaLampadasD2     = lazy(() => import('./pages/QuimicaLampadasD2'));
+const QuimicaLampadasTodosAA= lazy(() => import('./pages/QuimicaLampadasTodosAA'));
+const QuimicaTubosGrafite   = lazy(() => import('./pages/QuimicaTubosGrafite'));
+const QuimicaEquivalentes   = lazy(() => import('./pages/QuimicaEquivalentes'));
+const QuimicaICP            = lazy(() => import('./pages/QuimicaICP'));
+const QuimicaCHNS           = lazy(() => import('./pages/QuimicaCHNS'));
+
+const Oceanografia          = lazy(() => import('./pages/Oceanografia'));
+const OceanografiaNKE       = lazy(() => import('./pages/OceanografiaNKE'));
+const OceanografiaHydrobios = lazy(() => import('./pages/OceanografiaHydrobios'));
+const OceanografiaWildco    = lazy(() => import('./pages/OceanografiaWildco'));
+const OceanografiaSeaber    = lazy(() => import('./pages/OceanografiaSeaber'));
+const OceanografiaMarca     = lazy(() => import('./pages/OceanografiaMarca'));
+const OutrasMarcasOceanografia = lazy(() => import('./pages/OutrasMarcasOceanografia'));
+const Drones                = lazy(() => import('./pages/Drones'));
+const Micotoxinas           = lazy(() => import('./pages/Micotoxinas'));
+const MaterialLaboratorio   = lazy(() => import('./pages/MaterialLaboratorio'));
+const Produtos              = lazy(() => import('./pages/Produtos'));
+const ProdutoDetalhe        = lazy(() => import('./pages/ProdutoDetalhe'));
+const Marcas                = lazy(() => import('./pages/Marcas'));
+const MateriaisReferencia   = lazy(() => import('./pages/MateriaisReferencia'));
+const PeixeZebra            = lazy(() => import('./pages/PeixeZebra'));
+const PoliticaPrivacidade   = lazy(() => import('./pages/PoliticaPrivacidade'));
+const NotFound              = lazy(() => import('./pages/NotFound'));
+
+function PageLoader() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-white">
+      <div className="w-8 h-8 rounded-full border-2 border-brand-200 border-t-brand-600 animate-spin" />
+    </div>
+  );
+}
 
 export default function App() {
   const location = useLocation();
@@ -100,7 +113,7 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <HelmetProvider>
       <AnnouncementBar visible={barVisible} onDismiss={dismissBar} />
       <CookieBanner />
       <ScrollToTop />
@@ -108,6 +121,7 @@ export default function App() {
       <Navbar onSearchOpen={() => setSearchOpen(true)} barVisible={barVisible} />
       <GlobalSearch open={searchOpen} onClose={() => setSearchOpen(false)} />
       <motion.main className="min-h-screen" style={{ skewY }}>
+        <Suspense fallback={<PageLoader />}>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
@@ -123,17 +137,19 @@ export default function App() {
             <Route path="/quimica/equivalentes/:brand" element={<QuimicaEquivalentes />} />
             <Route path="/quimica/icp-icpms" element={<QuimicaICP />} />
             <Route path="/quimica/chns-toc" element={<QuimicaCHNS />} />
-            <Route path="/quimica/digestao" element={<QuimicaDigestao />} />
+
             <Route path="/oceanografia" element={<Oceanografia />} />
             <Route path="/oceanografia/nke" element={<OceanografiaNKE />} />
             <Route path="/oceanografia/hydrobios" element={<OceanografiaHydrobios />} />
+            <Route path="/oceanografia/wildco" element={<OceanografiaWildco />} />
             <Route path="/oceanografia/seaber" element={<OceanografiaSeaber />} />
-            <Route path="/oceanografia/wildco" element={<OceanografiaMarca brandId="wildco" />} />
             <Route path="/oceanografia/northlift" element={<OceanografiaMarca brandId="northlift" />} />
             <Route path="/oceanografia/general-oceanics" element={<OceanografiaMarca brandId="general-oceanics" />} />
             <Route path="/oceanografia/aquatic-biotechnology" element={<OceanografiaMarca brandId="aquatic-biotechnology" />} />
             <Route path="/oceanografia/kc-denmark" element={<OceanografiaMarca brandId="kc-denmark" />} />
             <Route path="/oceanografia/osil" element={<OceanografiaMarca brandId="osil" />} />
+            <Route path="/oceanografia/outras-marcas" element={<OutrasMarcasOceanografia />} />
+            <Route path="/peixe-zebra" element={<PeixeZebra />} />
             <Route path="/drones" element={<Drones />} />
             <Route path="/micotoxinas" element={<Micotoxinas />} />
             <Route path="/material-laboratorio" element={<MaterialLaboratorio />} />
@@ -146,6 +162,7 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
+        </Suspense>
       </motion.main>
       <Footer />
       <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
@@ -153,6 +170,6 @@ export default function App() {
       <FloatingContact />
       <BackToTop />
       <CustomCursor />
-    </>
+    </HelmetProvider>
   );
 }

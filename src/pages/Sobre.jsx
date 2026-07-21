@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -131,6 +132,11 @@ export default function Sobre() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Sobre Nós e Contactos"
+        description="Wonderstatus, Lda. — distribuidora de equipamentos científicos para laboratório, investigação e indústria em Portugal. Contacte-nos para orçamentos e informações."
+        path="/sobre"
+      />
       <PageHeader
         kicker="Wonderstatus"
         title="Sobre Nós / Contactos"
@@ -297,8 +303,7 @@ export default function Sobre() {
               <a
                 className="mt-6 btn-primary"
                 href={contact.mapLink}
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
               >
                 Abrir no Google Maps
               </a>

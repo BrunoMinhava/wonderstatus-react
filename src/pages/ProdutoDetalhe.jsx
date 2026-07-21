@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { waterProductDetails } from '../data/water-products';
+import PageMeta from '../components/PageMeta';
 import ProductDetail from '../components/ProductDetail';
 import NotFound from './NotFound';
 
@@ -31,15 +32,23 @@ export default function ProdutoDetalhe() {
     }));
 
   return (
-    <ProductDetail
-      product={product}
-      breadcrumbs={[
-        { label: 'Home', to: '/' },
-        { label: 'Sistemas de Produção de Água', to: '/agua' },
-        { label: 'Produtos', to: '/produtos' },
-        { label: product.name }
-      ]}
-      relatedProducts={related}
-    />
+    <>
+      <PageMeta
+        title={product.name}
+        description={product.subtitle || product.description}
+        path={`/produtos/${slug}`}
+        image={product.images?.[0]?.src || product.image}
+      />
+      <ProductDetail
+        product={product}
+        breadcrumbs={[
+          { label: 'Home', to: '/' },
+          { label: 'Sistemas de Produção de Água', to: '/agua' },
+          { label: 'Produtos', to: '/produtos' },
+          { label: product.name }
+        ]}
+        relatedProducts={related}
+      />
+    </>
   );
 }

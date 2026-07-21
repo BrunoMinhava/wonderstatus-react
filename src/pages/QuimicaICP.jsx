@@ -1,11 +1,13 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
 import BrandGrid from '../components/BrandGrid';
 import ContactCTA from '../components/ContactCTA';
 import PageTransition from '../components/PageTransition';
+import QuimicaTabRail from '../components/QuimicaTabRail';
 import { brandsByArea } from '../data/brands';
 import icpData from '../data/icp-catalog-data';
 
@@ -37,16 +39,23 @@ export default function QuimicaICP() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Consumíveis ICP e ICP-MS — Cones, Nebulizadores e Câmaras"
+        description="Consumíveis para ICP e ICP-MS: cones de amostrador e skimmer, nebulizadores, câmaras de spray, sprays, tubos peristálticos e distribuidores. Compatíveis com PerkinElmer, Agilent, Shimadzu e Thermo."
+        path="/quimica/icp-icpms"
+      />
       <PageHeader
         kicker="Química · ICP / ICP-MS"
         title="Consumíveis para ICP e ICP-MS"
         subtitle="Catálogo técnico completo por fabricante e modelo — Agilent, PerkinElmer, Thermo Scientific, Shimadzu, Hitachi, Analytik Jena, Horiba, Spectro, Nu Instruments, Radom e Standard BioTools."
-        image="/assets/slide4.JPG"
+        image="/assets/fotos/quimica-icp.png"
+        noParallax
         actions={[
           { label: 'Ver catálogo', href: '#catalogo' },
           { label: 'Pedir informação', href: '/sobre#formulario-contacto', ghost: true }
         ]}
       />
+      <QuimicaTabRail />
 
       {/* Categorias de consumíveis */}
       <section className="section">
@@ -189,8 +198,7 @@ export default function QuimicaICP() {
                                   <a
                                     key={j}
                                     href={m.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    target="_blank" rel="noopener noreferrer"
                                     className="inline-flex items-center gap-1.5 rounded-lg bg-white border border-brand-200 px-3 py-1 text-xs font-medium text-brand-700 hover:bg-brand-50 hover:border-brand-400 transition-all"
                                   >
                                     {m.name}

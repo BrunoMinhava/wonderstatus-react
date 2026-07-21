@@ -71,6 +71,15 @@ export default {
         "Medidores portáteis e de bancada para pH, CE, ORP, oxigénio dissolvido, turbidez e fotometria — pens, testers, monitores, controladores, refractómetros e consumíveis para laboratório e aplicações industriais."
     },
     {
+      id: "itv",
+      name: "ITV Ice Makers",
+      logo: "/assets/logos/itv.png",
+      siteUrl: "https://itv.es/en/",
+      categoryUrl: "https://itv.es/en/granular-ice/",
+      highlight: "Máquinas de Gelo · Diamond Ice",
+      summary: "Máquinas de gelo granular e Diamond Ice para laboratório, conservação de amostras, pesca e aplicações industriais alimentares."
+    },
+    {
       id: "wonderstatus",
       name: "Wonderstatus",
       logo: "/assets/logos/wonderstatus-logo.png",
@@ -1564,7 +1573,7 @@ export default {
           id: "jp-selecta-agitadores-shakers",
           name: "Agitadores / Shakers",
           image:
-            "https://jpselecta.s3.eu-west-1.amazonaws.com/Cat%C3%A1logo/Agitadores/7001723+-+MOVIL-ROD/MOVIL+ROD+(1).png",
+            "https://jpselecta.s3.eu-west-1.amazonaws.com/Pantalla+principal/Equipos/Agitador+JP+Selecta.png",
           summary:
             "Agitadores e shakers para mistura controlada em protocolos de preparação e ensaio.",
           url: "https://grupo-selecta.com/catalogo/jp-selecta",
@@ -1586,7 +1595,7 @@ export default {
           id: "jp-selecta-termostatos-e-controlo",
           name: "Termostatos e Controlo",
           image:
-            "https://grupo-selecta.com/wp-content/uploads/2020/02/frigiterm.jpg",
+            "/assets/fotos/jp-selecta/frigiterm.jpg",
           summary:
             "Termostatos e sistemas de regulação para controlo fino de temperatura em processos técnicos.",
           url: "https://grupo-selecta.com/catalogo/jp-selecta",
@@ -1603,7 +1612,7 @@ export default {
           id: "jp-selecta-analise-agua-e-alimentos",
           name: "Equipamento para análise de água e alimentos",
           image:
-            "https://grupo-selecta.com/wp-content/uploads/2020/02/bloc-digest.jpg",
+            "/assets/fotos/jp-selecta/pro-nitro.jpg",
           summary:
             "Linhas para digestao, destilação e análise aplicada a água, alimentos e controlo de qualidade.",
           url: "https://grupo-selecta.com/catalogo/jp-selecta",
@@ -2447,6 +2456,57 @@ export default {
           items: [
             { name: "Suporte 5 posições — canal único", url: "https://wonderstatus.pt/" }
           ]
+        }
+      ]
+    },
+    {
+      id: "itv-gelo",
+      brandId: "itv",
+      navLabel: "ITV | Máquinas de Gelo",
+      kicker: "ITV Ice Makers · Diamond Ice",
+      title: "Máquinas de Gelo Granular — Série IQ C",
+      description:
+        "Máquinas de gelo Diamond Ice compactas para laboratório, conservação de amostras biológicas e aplicações que requerem gelo de baixa humidade. A série IQ C produz Diamond Ice — gelo granular seco com forma cúbica arredondada, ideal para envolvência uniforme de amostras.",
+      sourceUrl: "https://itv.es/en/granular-ice/",
+      sourceLabel: "Ver gama completa ITV",
+      families: [
+        {
+          id: "itv-iq50c",
+          name: "IQ 50C",
+          image: "/assets/fotos/itv-icemaker.png",
+          summary:
+            "Máquina de gelo Diamond Ice com produção de 55 kg/24h e reservatório de 20 kg. Dimensões compactas (465 × 595 × 784 mm) adequadas para bancada de laboratório ou câmara frigorífica. Refrigerante R290 ecológico.",
+          url: "https://www.itv.es/cd/docs/iq/itv_iq50_r290_ft2301p50_enes.pdf",
+          capacityTable: {
+            columns: ["Parâmetro", "Valor"],
+            rows: [
+              ["Tipo de gelo", "Diamond Ice (granular seco)"],
+              ["Produção / 24h", "55 kg"],
+              ["Reservatório", "20 kg"],
+              ["Dimensões (L × P × A)", "465 × 595 × 784 mm (+ 105/155 mm pés)"],
+              ["Refrigerante", "R290"],
+              ["Condensador", "Ar (C)"]
+            ]
+          }
+        },
+        {
+          id: "itv-iq90c",
+          name: "IQ 90C",
+          image: "/assets/fotos/itv-icemaker.png",
+          summary:
+            "Máquina de gelo Diamond Ice com produção de 94 kg/24h e reservatório de 20 kg. Mesmas dimensões compactas da IQ 50C (465 × 595 × 784 mm) com maior capacidade de produção. Refrigerante R290 ecológico.",
+          url: "https://www.itv.es/cd/bkofcd/imgs/userfiles/docs/iq/itv_iq90c_r290_ft2301p50_enes.pdf",
+          capacityTable: {
+            columns: ["Parâmetro", "Valor"],
+            rows: [
+              ["Tipo de gelo", "Diamond Ice (granular seco)"],
+              ["Produção / 24h", "94 kg"],
+              ["Reservatório", "20 kg"],
+              ["Dimensões (L × P × A)", "465 × 595 × 784 mm (+ 105/155 mm pés)"],
+              ["Refrigerante", "R290"],
+              ["Condensador", "Ar (C)"]
+            ]
+          }
         }
       ]
     }

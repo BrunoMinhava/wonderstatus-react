@@ -1,3 +1,4 @@
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -12,6 +13,11 @@ export default function QuimicaLampadasTodosAA() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Lâmpadas HCL para Todos os Espectrofotómetros AA"
+        description="Tabela completa de lâmpadas de cátodo oco (HCL) compatíveis com todos os principais espectrofotómetros de absorção atómica: Agilent/Varian, Hitachi, PerkinElmer, Shimadzu e GBC."
+        path="/quimica/lampadas-todos-aa"
+      />
       <PageHeader
         kicker="AAS · Compatibilidade Transversal"
         title="Lâmpadas para todos os instrumentos AA"

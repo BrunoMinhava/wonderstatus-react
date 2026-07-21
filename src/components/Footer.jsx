@@ -126,8 +126,7 @@ export default function Footer() {
           <div className="flex gap-5">
             <a
               href={contact.mapLink}
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="hover:text-white transition-colors"
             >
               Google Maps
@@ -140,8 +139,7 @@ export default function Footer() {
             </Link>
             <a
               href="https://www.livroreclamacoes.pt/"
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="hover:text-white transition-colors"
             >
               Livro de Reclamações

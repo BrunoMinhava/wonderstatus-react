@@ -1,11 +1,13 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
 import ContactCTA from '../components/ContactCTA';
 import PageTransition from '../components/PageTransition';
+import QuimicaTabRail from '../components/QuimicaTabRail';
 import ZoomableImage from '../components/Lightbox';
 import { lampadasData, lampadasHeaders } from '../data/lampadas-data';
 
@@ -87,16 +89,23 @@ export default function QuimicaLampadas() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Lâmpadas de Cátodo Oco (HCL) para Espectroscopia AA"
+        description="Lâmpadas de cátodo oco (HCL) e lâmpadas de deutério (D2) para espectroscopia de absorção atómica. Compatíveis com Agilent, Hitachi, PerkinElmer, Shimadzu e GBC. Seleção por elemento e marca."
+        path="/quimica/lampadas"
+      />
       <PageHeader
         kicker="AAS Technical Catalog"
         title="Lâmpadas de Cátodo Oco e D2"
         subtitle="37 mm / 1.5&quot;, 50 mm / 2.0&quot; e Deutério em navegação segmentada. Compatibilidade multimarca para AAS com equivalências Agilent, Thermo, PerkinElmer e mais."
-        image="/assets/slide4.JPG"
+        image="/assets/fotos/quimica-lampadas.png"
+        noParallax
         actions={[
           { label: 'Ver tabelas', href: '#tabela' },
           { label: 'Pedir informação', href: '/sobre#formulario-contacto', ghost: true }
         ]}
       />
+      <QuimicaTabRail />
 
       {/* Galeria de imagens das lâmpadas */}
       <section className="section">

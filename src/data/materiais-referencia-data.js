@@ -59,7 +59,7 @@ export const crmBrands = [
     id: 'vki',
     name: 'VKI (Eurofins)',
     logo: '/assets/logos/vki.svg',
-    url: 'https://www.eurofins.dk/miljoe/vores-ydelser/vki-certificerede-referencematerialer/information-in-english/',
+    url: 'https://www.eurofins.dk/miljoe/analyser-og-maalinger/vki-certificerede-referencematerialer/information-in-english/material-safety-data-sheets/',
     country: 'Dinamarca',
     badge: 'Distribuição',
     tagline: 'Materiais de referência certificados para análise de qualidade da água, solos, lamas e nutrientes em amostras ambientais.',

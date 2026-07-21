@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -25,6 +26,11 @@ export default function Agua() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Sistemas de Água Ultrapura para Laboratório"
+        description="Sistemas de produção de água ultrapura Tipo I (18,2 MΩ·cm) e Tipo II para laboratório. Série WATER 75, WATER 75 XL e WATER 300 — desenvolvidos pela Wonderstatus em Portugal."
+        path="/agua"
+      />
       <PageHeader
         kicker="Sistemas de Produção de Água"
         title="Sistemas de Produção de Água Tipo I e Tipo II"

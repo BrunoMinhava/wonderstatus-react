@@ -1,3 +1,4 @@
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -94,6 +95,11 @@ export default function QuimicaDigestao() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Equipamento de Digestão de Metais e Preparação de Amostras"
+        description="Sistemas de digestão ácida assistida por micro-ondas, blocos de digestão e automação para preparação de amostras ambientais, solos, sedimentos e alimentos. Environmental Express e Milestone."
+        path="/quimica/digestao"
+      />
       <PageHeader
         kicker="Preparação de Amostras · Environmental Express"
         title="Digestão de metais, filtração e automação num fluxo mais limpo"

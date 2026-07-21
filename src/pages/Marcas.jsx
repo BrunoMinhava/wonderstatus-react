@@ -1,3 +1,4 @@
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ScrollReveal from '../components/ScrollReveal';
@@ -11,6 +12,11 @@ import { crmBrands } from '../data/materiais-referencia-data';
 export default function Marcas() {
   return (
     <PageTransition>
+      <PageMeta
+        title="Marcas Representadas — Equipamento Científico em Portugal"
+        description="Marcas internacionais de equipamento científico representadas pela Wonderstatus em Portugal: JP SELECTA, NKE, Hydrobios, Seaber, Auxilab, CRUMA, Socorex, Milwaukee, ROFA e mais."
+        path="/marcas"
+      />
       <PageHeader
         kicker="Marcas e Fornecedores"
         title="Uma rede internacional de fabricantes parceiros"
@@ -20,6 +26,22 @@ export default function Marcas() {
           { label: 'Pedir informação', href: '/sobre#formulario-contacto' }
         ]}
       />
+
+      {/* Peixe Zebra */}
+      <section className="section bg-ink-50">
+        <div className="container-wide">
+          <SectionHead
+            kicker="Peixe Zebra"
+            title="Análise Comportamental"
+            description="Sistemas de rastreamento comportamental para investigação com peixe zebra — da fase embrionária ao adulto."
+          />
+          <div className="mt-8 md:mt-10">
+            <ScrollReveal>
+              <BrandGrid brands={brandsByArea.peixeZebra} />
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
 
       {/* Química */}
       <section className="section">

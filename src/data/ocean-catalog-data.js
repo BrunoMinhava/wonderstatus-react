@@ -797,7 +797,7 @@ export default {
             },
             {
               "name": "OEM version of MWS",
-              "image": "https://www.hydrobios.de/images/produkte/668_L.jpg",
+              "image": "https://www.hydrobios.de/images/produkte/668_L.webp",
               "url": "https://www.hydrobios.de/en/product?product_id=342",
               "summary": "OEM version of MWS para sistemas múltiplos de recolha de água e configuracoes tipo rosette."
             }
@@ -838,13 +838,13 @@ export default {
             },
             {
               "name": "LIMNOS Water Sampler 4 bottle 1 l",
-              "image": "https://www.hydrobios.de/images/produkte/669_L.jpg",
+              "image": "https://www.hydrobios.de/images/produkte/669_L.webp",
               "url": "https://www.hydrobios.de/en/product?product_id=343",
               "summary": "LIMNOS Water Sampler 4 bottle 1 l para amostragem individual em profundidade, com enfoque em operação simples e repetivel."
             },
             {
               "name": "LIMNOS Water Sampler 4 bottle 2 l",
-              "image": "https://www.hydrobios.de/images/produkte/669_L.jpg",
+              "image": "https://www.hydrobios.de/images/produkte/669_L.webp",
               "url": "https://www.hydrobios.de/en/product?product_id=344",
               "summary": "LIMNOS Water Sampler 4 bottle 2 l para amostragem individual em profundidade, com enfoque em operação simples e repetivel."
             },
@@ -1098,7 +1098,7 @@ export default {
             },
             {
               "name": "Nansen Closing Net",
-              "image": "https://www.hydrobios.de/images/produkte/25_L.jpg",
+              "image": "https://www.hydrobios.de/images/produkte/25_L.webp",
               "url": "https://www.hydrobios.de/en/product?product_id=17",
               "summary": "Nansen Closing Net para arrastos verticais, perfis de profundidade e recolha de plankton na coluna de água."
             },
@@ -1554,7 +1554,7 @@ export default {
             },
             {
               "name": "Motor Winch for 20 kg Payloads",
-              "image": "https://www.hydrobios.de/images/produkte/682_L.jpg",
+              "image": "https://www.hydrobios.de/images/produkte/682_L.webp",
               "url": "https://www.hydrobios.de/en/product?product_id=351",
               "summary": "Motor Winch for 20 kg Payloads para apoio a medição, controlo operacional e trabalho de campo."
             }
@@ -1760,31 +1760,37 @@ export default {
           "navLabel": "Flutuadores ARVOR / PROVOR",
           "wonderLabel": "Flutuadores de Perfil ARVOR / PROVOR",
           "title": "Profiling Floats",
+          "image": "/assets/fotos/nke/arvor-standard.jpg",
           "sourceUrl": "https://nke-instrumentation.com/products/profiling-floats/",
           "summary": "Flutuadores autónomos para perfis oceânicos com transmissão ARGOS/Iridium — gama ARVOR (padrão e costeiro) até 4000 m (Deep ARVOR), BGC-ARGO e regiões polares.",
           "products": [
             {
               "name": "ARVOR",
-              "url": "https://nke-instrumentation.com/products/profiling-floats/arvor/",
+              "image": "/assets/fotos/nke/arvor-standard.jpg",
+              "url": "https://nke-instrumentation.com/products/profiling-floats/",
               "summary": "Flutuador padrão com CTD Sea-Bird, transmissão ARGOS ou Iridium."
             },
             {
               "name": "ARVOR C (Costeiro)",
-              "url": "https://nke-instrumentation.com/products/profiling-floats/arvor-c/",
+              "image": "/assets/fotos/nke/arvor-standard.jpg",
+              "url": "https://nke-instrumentation.com/products/profiling-floats/",
               "summary": "Versão costeira até 400 m de profundidade, até 300 ciclos, controlo remoto Iridium."
             },
             {
               "name": "Deep ARVOR",
-              "url": "https://nke-instrumentation.com/products/profiling-floats/deep-arvor/",
+              "image": "/assets/fotos/nke/deep-arvor.jpg",
+              "url": "https://nke-instrumentation.com/products/profiling-floats/",
               "summary": "Até 4000 m de profundidade, ~150 ciclos, CTD Sea-Bird, Bluetooth RF + Iridium."
             },
             {
               "name": "PROVOR CTS5 (BGC-ARGO)",
-              "url": "https://nke-instrumentation.com/products/profiling-floats/provor/",
+              "image": "/assets/fotos/nke/provor-bio.jpg",
+              "url": "https://nke-instrumentation.com/products/profiling-floats/",
               "summary": "Flutuador biogeoquímico até 2000 m — O₂, nitratos, pH, clorofila, irradiância + UVP6-LP."
             },
             {
               "name": "Polar Float",
+              "image": "/assets/fotos/nke/deep-arvor.jpg",
               "url": "https://nke-instrumentation.com/products/profiling-floats/",
               "summary": "Versão para regiões árticas e antárticas, operação sob gelo e ao largo."
             }
@@ -1795,27 +1801,32 @@ export default {
           "navLabel": "Bóias Instrumentadas",
           "wonderLabel": "Bóias Instrumentadas e Deriva",
           "title": "Instrumented Buoys & Drifters",
+          "image": "/assets/fotos/nke/boia-100l.jpg",
           "sourceUrl": "https://nke-instrumentation.com/products/buoys/",
           "summary": "Bóias fixas instrumentadas (100 L) e bóias à deriva SVP para monitorização de temperatura superficial, pressão e salinidade com transmissão por satélite Iridium.",
           "products": [
             {
               "name": "Bóia 100 L",
+              "image": "/assets/fotos/nke/boia-100l.jpg",
               "url": "https://nke-instrumentation.com/products/buoys/",
               "summary": "Suporta ventos até 100 km/h, 2 nós de corrente, proteção anti-incrustação, sem ferramentas especiais."
             },
             {
               "name": "SC40 SVP-B (Deriva SST)",
-              "url": "https://nke-instrumentation.com/products/drifters/sc40-svp-b/",
+              "image": "/assets/fotos/nke/boias-instrumentadas.jpg",
+              "url": "https://nke-instrumentation.com/products/buoys/",
               "summary": "Temperatura superficial, pressão barométrica, deteção de drogue, GPS e Iridium."
             },
             {
               "name": "SC40 SVP BRST (Deriva SST+)",
-              "url": "https://nke-instrumentation.com/products/drifters/sc40-svp-brst/",
+              "image": "/assets/fotos/nke/boias-instrumentadas.jpg",
+              "url": "https://nke-instrumentation.com/products/buoys/",
               "summary": "Temperatura de alta resolução, pressão e deteção de drogue, Iridium."
             },
             {
               "name": "SC40 SVP-BSC (Deriva CTD)",
-              "url": "https://nke-instrumentation.com/products/drifters/sc40-svp-bsc/",
+              "image": "/assets/fotos/nke/boias-instrumentadas.jpg",
+              "url": "https://nke-instrumentation.com/products/buoys/",
               "summary": "Condutividade/temperatura em deriva com transmissão por satélite."
             }
           ]
@@ -2264,28 +2275,28 @@ export default {
           "navLabel": "Garrafas Niskin",
           "wonderLabel": "Garrafas Niskin e Amostradores de Água",
           "title": "Water Sampling Bottles",
-          "sourceUrl": "https://osil.com/products/water-sampling/",
+          "sourceUrl": "https://osil.com/product-category/sampling-equipment/",
           "image": "https://osil.com/content/uploads/2018/12/niskin-bottles-scaled.jpg",
           "summary": "Garrafas Niskin de 1,7 L a 20 L em PVC e inox, Marine Snow Catcher de 100 L, amostrador de microplásticos e fecho externo.",
           "products": [
             {
               "name": "Niskin 1,7 L – 20 L (PVC)",
-              "url": "https://osil.com/products/water-sampling/niskin-bottles/",
+              "url": "https://osil.com/product/niskin-bottles/",
               "summary": "Garrafas para amostragem genérica com fechos de mola em latex."
             },
             {
               "name": "Niskin em Inox (1,7 L – 20 L)",
-              "url": "https://osil.com/products/water-sampling/niskin-bottles/",
+              "url": "https://osil.com/product/externally-closing-niskin-bottle/",
               "summary": "Versão em aço inoxidável para metais vestigiais e meios corrosivos."
             },
             {
               "name": "Marine Snow Catcher 100 L",
-              "url": "https://osil.com/products/water-sampling/marine-snow-catcher/",
+              "url": "https://osil.com/product/marine-snow-catcher-large-volume-water-sampler/",
               "summary": "Amostrador de 100 L para neve marinha, fluxo de carbono e análise de redes alimentares — janela de visualização acrílica."
             },
             {
               "name": "Amostrador de Microplásticos",
-              "url": "https://osil.com/products/water-sampling/microplastics-sampler/",
+              "url": "https://osil.com/product/microplastics-sampler/",
               "summary": "Amostrador especializado para investigação de microplásticos em superfície e coluna de água."
             }
           ]
@@ -2295,43 +2306,43 @@ export default {
           "navLabel": "Amostradores de Sedimento",
           "wonderLabel": "Corers, Grabs e Vibrocorers",
           "title": "Sediment Sampling",
-          "sourceUrl": "https://osil.com/products/sediment-sampling/",
+          "sourceUrl": "https://osil.com/product-category/sampling-equipment/",
           "image": "https://osil.com/content/uploads/2018/12/IMG20211220093731-2-scaled.jpg",
           "summary": "Van Veen grabs (0,045–0,25 m²), gravity corers (3 m), vibrocorers (3–12 m, 600 m), pistão (3–60 m) e box corers para campanhas costeiras e oceânicas.",
           "products": [
             {
               "name": "Van Veen Grab (0,045–0,25 m²)",
-              "url": "https://osil.com/products/sediment-sampling/van-veen-grab/",
+              "url": "https://osil.com/product-category/sampling-equipment/",
               "summary": "Inox 316, painéis de acesso articulados, subamostragem possível, lastre opcional."
             },
             {
-              "name": "Gravity Corer (até 3 m)",
-              "url": "https://osil.com/products/sediment-sampling/gravity-corer/",
+              "name": "Gravity Corer (até 6 m)",
+              "url": "https://osil.com/product/gravity-corer-3m-6m/",
               "summary": "Aço carbono, liner substituível, aletas estabilizadoras, 268 kg de lastro."
             },
             {
               "name": "Vibrocorer 3–12 m",
-              "url": "https://osil.com/products/sediment-sampling/vibrocorer/",
+              "url": "https://osil.com/product/midi-vibrocorer/",
               "summary": "Vibração 50 Hz, profundidade até 600 m, diâmetro 96 mm, potências 1,8–7,2 kW."
             },
             {
-              "name": "Piston Corer (3–60 m)",
-              "url": "https://osil.com/products/sediment-sampling/piston-corer/",
+              "name": "Piston Corer (até 60 m)",
+              "url": "https://osil.com/product/jumbo-giant-piston-corer-18m-60m/",
               "summary": "Padrão até 18 m e gigante até 60 m para sondagens sedimentares longas."
             },
             {
               "name": "Box Corer",
-              "url": "https://osil.com/products/sediment-sampling/box-corer/",
+              "url": "https://osil.com/product/box-corer-t-bar-system/",
               "summary": "Amostragem rápida de área larga para avaliação sedimentar de superfície."
             },
             {
               "name": "Multi-Corer",
-              "url": "https://osil.com/products/sediment-sampling/multi-corer/",
+              "url": "https://osil.com/product/multi-multiple-corers/",
               "summary": "Sistema multi-tubo para amostragem simultânea em múltiplos pontos."
             },
             {
               "name": "Smith McIntyre Grab / Day Grab",
-              "url": "https://osil.com/products/sediment-sampling/",
+              "url": "https://osil.com/product-category/sampling-equipment/",
               "summary": "Dragas bentónicas para sedimentos de fundo variado."
             }
           ]
@@ -2341,37 +2352,42 @@ export default {
           "navLabel": "Bóias e Telemetria",
           "wonderLabel": "Bóias Meteo-Oceanográficas",
           "title": "Data Buoys & Telemetry",
-          "sourceUrl": "https://osil.com/products/data-buoys/",
+          "sourceUrl": "https://osil.com/product-category/data-buoys-telemetry/",
+          "image": "/assets/fotos/osil/boia-albatross.jpg",
           "summary": "Gama de bóias de 0,3 m a 3,0 m para monitorização costeira e meteo-oceanográfica, incluindo versões especializadas para derrames de petróleo e profiling.",
           "products": [
             {
               "name": "Bóia Tern 1,2 m (Costeira)",
-              "url": "https://osil.com/products/data-buoys/",
+              "url": "https://osil.com/product/osil-1-2m-coastal-tern-monitoring-buoy/",
               "summary": "Monitorização costeira — sensores, telemetria e ancoragem."
             },
             {
               "name": "Bóia Gannet 1,75 m (Metocean)",
-              "url": "https://osil.com/products/data-buoys/",
+              "url": "https://osil.com/product/1-75m-metocean-buoy-gannet/",
+              "image": "/assets/fotos/osil/boia-gannett.jpg",
               "summary": "Aplicações meteo-oceanográficas gerais."
             },
             {
               "name": "Bóia Fulmar 1,9 m (Metocean)",
-              "url": "https://osil.com/products/data-buoys/",
+              "url": "https://osil.com/product/osil-1-9m-metocean-fulmar-buoy/",
+              "image": "/assets/fotos/osil/boia-fulmar.jpg",
               "summary": "Capacidade meteo-oceanográfica melhorada."
             },
             {
               "name": "Bóia Albatross 3,0 m",
-              "url": "https://osil.com/products/data-buoys/",
+              "url": "https://osil.com/product/osil-3-0m-metocean-albatross-buoy/",
+              "image": "/assets/fotos/osil/boia-albatross.jpg",
               "summary": "Sistemas de grande escala para oceano aberto."
             },
             {
               "name": "Bóia de Derrames de Petróleo",
-              "url": "https://osil.com/products/data-buoys/",
+              "url": "https://osil.com/product/oil-spill-monitoring-buoys/",
               "summary": "Monitorização especializada para hidrocarbonetos e resposta ambiental."
             },
             {
               "name": "Profiling Buoy Range",
-              "url": "https://osil.com/products/data-buoys/",
+              "url": "https://osil.com/product/osil-profiling-buoys/",
+              "image": "/assets/fotos/osil/profiling-buoys.jpg",
               "summary": "Bóias de perfil para diferentes profundidades e frequências de amostragem."
             }
           ]
@@ -2381,38 +2397,38 @@ export default {
           "navLabel": "Salinómetros e Padrões",
           "wonderLabel": "Salinómetros e Padrões de Água do Mar",
           "title": "Salinometers & Seawater Standards",
-          "sourceUrl": "https://osil.com/products/salinometers/",
+          "sourceUrl": "https://osil.com/product-category/seawater-standards-salinometers/",
           "image": "https://osil.com/content/uploads/2019/04/2014-01-31-10.46.03-scaled.jpg",
           "summary": "Salinómetros de laboratório Autosal 8400B (±0,002 PSU) e portátil Portasal 8410A, padrões de água do mar IAPSO (séries P, 30 L, 10 L, 38H) e kits de calibração.",
           "products": [
             {
               "name": "Autosal 8400B",
-              "url": "https://osil.com/products/salinometers/autosal-8400b/",
+              "url": "https://osil.com/product/autosal-salinometer-8400b/",
               "summary": "Salinómetro de laboratório — acurácia ±0,002 PSU, gama 0,004–76 mS/cm, <1 min por amostra."
             },
             {
               "name": "Portasal 8410A",
-              "url": "https://osil.com/products/salinometers/portasal-8410a/",
+              "url": "https://osil.com/product/portasal-salinometer-8410a/",
               "summary": "Salinómetro portátil — <±0,003 PSU, 100 mL de amostra, RS232/IEEE 488, 15–38 °C."
             },
             {
               "name": "Padrões IAPSO P-Series",
-              "url": "https://osil.com/products/seawater-standards/",
+              "url": "https://osil.com/product/p-series/",
               "summary": "Padrão oficial IAPSO para calibração de salinómetros."
             },
             {
               "name": "Padrões 10 L / 30 L / 38H Series",
-              "url": "https://osil.com/products/seawater-standards/",
+              "url": "https://osil.com/product-category/seawater-standards-salinometers/",
               "summary": "Padrões de água do mar em diferentes volumes para laboratórios e campanhas."
             },
             {
               "name": "Kit de Calibração Multipontos",
-              "url": "https://osil.com/products/seawater-standards/",
+              "url": "https://osil.com/product/linearity-pack/",
               "summary": "Linearity Pack para verificação multipontos de salinómetros."
             },
             {
               "name": "Nutrient Standards Kit / Low Nutrient Seawater",
-              "url": "https://osil.com/products/seawater-standards/",
+              "url": "https://osil.com/product/marine-nutrient-standards-kit/",
               "summary": "Padrões de nutrientes e água do mar de baixo teor para análises de precisão."
             }
           ]

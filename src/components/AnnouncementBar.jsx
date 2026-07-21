@@ -24,34 +24,22 @@ export default function AnnouncementBar({ visible, onDismiss }) {
             />
 
             <span className="relative flex items-center gap-2 text-center">
-              <span className="hidden sm:inline text-white/60">Novidade —</span>
-              <a
-                href="https://sibic2026.utad.pt/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold hover:underline underline-offset-2 text-white"
-              >
-                Presença no SIBIC 2026
-              </a>
-              <span className="text-white/40 hidden sm:inline">·</span>
+              <span className="text-white/60">Novidade —</span>
               <Link
                 to="/agua"
-                className="font-semibold hover:underline underline-offset-2 text-white hidden sm:inline"
+                className="font-semibold hover:underline underline-offset-2 text-white"
               >
-                Sistemas de Água WATER
+                Sistemas de Água Ultrapura WATER
               </Link>
-              <span className="text-white/40 mx-1 hidden sm:inline">·</span>
-              <a
-                href="https://sibic2026.utad.pt/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 rounded-full border border-white/25 bg-white/10 hover:bg-white/20 px-3 py-0.5 transition-colors whitespace-nowrap"
+              <Link
+                to="/agua"
+                className="hidden sm:inline-flex items-center gap-1 rounded-full border border-white/25 bg-white/10 hover:bg-white/20 px-3 py-0.5 transition-colors whitespace-nowrap"
               >
                 Saber mais
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14m-6-6 6 6-6 6" />
                 </svg>
-              </a>
+              </Link>
             </span>
 
             <button

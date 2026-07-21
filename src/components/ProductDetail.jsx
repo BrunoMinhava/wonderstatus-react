@@ -99,8 +99,7 @@ export default function ProductDetail({
                   {product.brand.url ? (
                     <a
                       href={product.brand.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target="_blank" rel="noopener noreferrer"
                       className="text-sm font-semibold text-ink-700 hover:text-brand-700"
                     >
                       {product.brand.name}

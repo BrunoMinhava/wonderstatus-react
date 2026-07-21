@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import PageMeta from '../components/PageMeta';
 import PageHeader from '../components/PageHeader';
 import SectionHead from '../components/SectionHead';
 import ContactCTA from '../components/ContactCTA';
@@ -388,6 +389,11 @@ export default function Produtos() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Catálogo de Produtos — Sistemas de Água Ultrapura e Acessórios"
+        description="Catálogo completo de produtos Wonderstatus: sistemas de produção de água ultrapura WATER 75, WATER 75 XL e WATER 300, dispensadores automáticos e sistemas de pré-tratamento para laboratório."
+        path="/produtos"
+      />
       <PageHeader
         kicker="Catálogo Global"
         title="Todos os Produtos"
@@ -616,8 +622,7 @@ export default function Produtos() {
                           {(activeMark.siteUrl || activeMark.categoryUrl) && (
                             <a
                               href={activeMark.categoryUrl || activeMark.siteUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                              target="_blank" rel="noopener noreferrer"
                               className="inline-flex items-center gap-2 rounded-full bg-brand-600 text-white px-5 py-2.5 text-sm font-semibold hover:bg-brand-700 transition-colors flex-shrink-0 self-start md:self-center shadow-soft"
                             >
                               Site oficial

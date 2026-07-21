@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import PageMeta from '../components/PageMeta';
 import HeroSlideshow from '../components/HeroSlideshow';
 import SectionHead from '../components/SectionHead';
 import CategoryCard from '../components/CategoryCard';
@@ -284,8 +285,7 @@ const destaque = [
   { id: 'lampadas-hcl',   name: 'Lâmpadas Cátodo Oco',     tag: 'Química', summary: 'Mono e multi-elementares 37 mm / 51 mm + deutério para AAS multimarca.',       image: '/assets/fotos/lampadas/mono-37mm-p801.jpg',   link: '/quimica/lampadas' },
   { id: 'icp-consumíveis', name: 'Consumíveis ICP / ICP-MS', tag: 'Química', summary: 'Nebulizadores, tochas, câmaras e cones para 11 fabricantes.',               image: '/assets/slide4.JPG',                          link: '/quimica/icp-icpms' },
   { id: 'chns-toc',       name: 'CHN/O/S · TOC',           tag: 'Química', summary: 'Consumíveis para análise elementar e carbono orgânico.',                      image: '/assets/slide4.JPG',                          link: '/quimica/chns-toc' },
-  { id: 'digestao',       name: 'Digestor de Metais',       tag: 'Química', summary: 'HotBlock, FilterMate, FlipMate e tubos Environmental Express para EPA.',      image: '/assets/fotos/digestao/hotblock-150.jpg',     link: '/quimica/digestao' },
-  { id: 'filtermate',     name: 'FilterMate & FlipMate',    tag: 'Química', summary: 'Filtração in-tube e transferência por vácuo do digestato.',                   image: '/assets/fotos/filtermate.jpeg',               link: '/quimica/digestao' },
+
   // Drones
   { id: 'hydra-7', name: 'Hydra 7', tag: 'Drones', summary: 'Plataforma 7" modular com DJI O4 Pro — cinematografia, inspeção e vigilância.', image: '/assets/fotos/drones/taurus-x8-banner.jpg', link: '/drones' },
   // Micotoxinas
@@ -299,6 +299,11 @@ export default function Home() {
 
   return (
     <PageTransition>
+      <PageMeta
+        title="Laboratório, Água Ultrapura e Oceanografia"
+        description="Wonderstatus — soluções para laboratório, investigação e indústria em Portugal: sistemas de água ultrapura série WATER, material de laboratório, oceanografia, química analítica e materiais de referência certificados."
+        path="/"
+      />
       {/* FULLSCREEN SLIDESHOW — preservado */}
       <HeroSlideshow />
 
